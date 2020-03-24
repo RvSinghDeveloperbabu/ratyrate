@@ -44,7 +44,7 @@ function initstars(){
         $(this).trigger('rated', score)
         $.post('<%= Rails.application.class.routes.url_helpers.rate_path %>',
         {
-          score: 5,
+          score: score,
           dimension: $(this).attr('data-dimension'),
           id: $(this).attr('data-id'),
           klass: $(this).attr('data-classname')
