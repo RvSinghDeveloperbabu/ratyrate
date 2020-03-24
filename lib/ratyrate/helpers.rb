@@ -82,6 +82,7 @@ module Ratyrate
     end
 
     def rating_for_user(rateable_obj, rating_user, dimension = nil, options = {})
+      debugger
       @object = rateable_obj
       @user   = rating_user
   	  @rating = Rate.find_by rater: @user, rateable: @object, dimension: dimension
