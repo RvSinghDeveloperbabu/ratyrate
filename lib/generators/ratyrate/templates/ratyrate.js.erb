@@ -4,6 +4,7 @@ $.fn.raty.defaults.path = "/assets";
 $.fn.raty.defaults.cancel = false;
 
 function initstars(){
+  debugger
   $(".star").each(function() {
     var $readonly = ($(this).attr('data-readonly') == 'true');
     var $half     = ($(this).attr('data-enable-half') == 'true');
@@ -12,9 +13,11 @@ function initstars(){
     var $cancel   = ($(this).attr('data-cancel') == 'true');
     $(this).raty({
       score: function() {
+        debugger
         return $(this).attr('data-rating')
       },
       number: function() {
+        debugger
         return $(this).attr('data-star-count')
       },
       half:        $half,
